@@ -313,7 +313,36 @@ finally :
     conn.close()
 """
 #Zip two things
+"""
 names = ('john','deo','lusy')
 laps = ('hp', 'mac', 'lenovo')
 full = list(zip(names, laps))
 print(full)
+"""
+# Calculator
+"""
+sum=0
+b=1
+while b>=1 :
+    a=int(input("Enter a number"))
+    sum=sum+a
+    symbol=input('')
+    if symbol == '=' :
+        break
+    b+=1
+print(sum)
+"""
+"""
+import cx_Oracle
+mydb = cx_Oracle.connect('hr/hr@localhost:1521/xe')
+cur=mydb.cursor()
+cur.execute('select * from emp')
+for i in cur :
+    print(i)
+cur.close()
+mydb.close()
+"""
+print("welcome to python calculator")
+print("You can enter any kind of equation and press enter")
+a = eval(input(''))
+print('This is your total : ',a)
