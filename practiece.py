@@ -294,6 +294,8 @@ class car:
 c1=car()
 c1.feature1('bmw','red')
 """
+#Oracle DB connection
+"""
 import cx_Oracle
 constr='OT_SRC_DEV/admin@localhost:1521/xe'
 conn = None
@@ -309,3 +311,9 @@ except Exception as err :
 finally :
     cur.close()
     conn.close()
+"""
+#Zip two things
+names = ('john','deo','lusy')
+laps = ('hp', 'mac', 'lenovo')
+full = list(zip(names, laps))
+print(full)
